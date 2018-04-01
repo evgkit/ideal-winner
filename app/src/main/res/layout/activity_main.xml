@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.evgkit.interactivestory.MainActivity">
+    tools:context="com.evgkit.interactivestory.ui.MainActivity">
 
     <ImageView
         android:id="@+id/titleImage"
@@ -26,7 +26,10 @@
         android:text="@string/start_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/white"
+        android:textColor="@color/colorTextButton"
+        android:textSize="16sp"/>
 
     <EditText
         android:id="@+id/nameInput"

@@ -1,10 +1,12 @@
-package com.evgkit.interactivestory;
+package com.evgkit.interactivestory.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.evgkit.interactivestory.R;
 
 public class StoryActivity extends AppCompatActivity {
 
