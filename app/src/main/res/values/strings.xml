@@ -2,11 +2,10 @@
     <string name="app_name">Signal from Mars</string>
     <string name="title_image_description">Signal from Mars title image</string>
     <string name="start_button_text">START YOUR ADVENTURE</string>
+    <string name="play_again_button_text">PLAY AGAIN</string>
     <string name="name_input_placeholder">Enter your name</string>
 
     <string name="page_image_description">Signal from Mars page image</string>
-    <string name="first_choice">First Choice</string>
-    <string name="second_choice">Second Choice</string>
 
     <string name="key_name">playerName</string>
 
@@ -33,4 +32,5 @@
     <string name="page5">After a long walk slightly uphill, you end up at the top of a small crater. You look around, and are overjoyed to see your favorite android, %1$s-S1124. It had been lost on a previous mission to Mars! You take it back to your ship and fly back to Earth.</string>
 
     <string name="page6">You arrive home on Earth. While your mission was a success, you forever wonder what was sending that signal. Perhaps a future mission will be able to investigate…</string>
+
 </resources>

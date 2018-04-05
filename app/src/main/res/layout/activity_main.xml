@@ -39,6 +39,7 @@
         android:hint="@string/name_input_placeholder"
         android:inputType="textPersonName"
         android:maxLength="30"
+        app:layout_constraintTop_toBottomOf="@+id/titleImage"
         app:layout_constraintBottom_toTopOf="@+id/startButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
