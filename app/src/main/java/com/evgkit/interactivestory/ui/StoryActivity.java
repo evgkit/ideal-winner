@@ -13,6 +13,8 @@ import com.evgkit.interactivestory.R;
 import com.evgkit.interactivestory.model.Page;
 import com.evgkit.interactivestory.model.Story;
 
+import java.util.Stack;
+
 public class StoryActivity extends AppCompatActivity {
     private ImageView imageStory;
     private TextView textStory;
@@ -21,6 +23,7 @@ public class StoryActivity extends AppCompatActivity {
 
     private Story story;
     private String playerName;
+    private Stack<Integer> pageStack = new Stack<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +38,21 @@ public class StoryActivity extends AppCompatActivity {
     }
 
     private void loadPage(int pageNumber) {
+        pageStack.push(pageNumber);
         final Page page = story.getPage(pageNumber);
         buildImageAndText(page);
         buildButtons(page);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (0 == pageStack.peek()) {
+            pageStack.removeAllElements();
+            super.onBackPressed();
+        } else {
+            pageStack.pop();
+            loadPage(pageStack.pop());
+        }
     }
 
     private void buildImageAndText(Page page) {
@@ -77,6 +92,7 @@ public class StoryActivity extends AppCompatActivity {
                 }
             });
 
+            buttonChoice2.setVisibility(View.VISIBLE);
             buttonChoice2.setText(page.getChoices().get(1).getTextId());
             buttonChoice2.setOnClickListener(new View.OnClickListener() {
                 @Override
